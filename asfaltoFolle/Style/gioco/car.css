@@ -1,0 +1,62 @@
+#macchina span{
+	display:inline-block;
+	width:62.5px;
+	height: 131.25px;
+	background: url("../../images/gioco/Sprite_Gioco2.png");
+	background-repeat: no-repeat;
+}
+
+#ostacolo img{
+	width:62.5px;
+	height: 131.25px;
+	position: absolute;
+}
+#ostacolo2 img{
+	width:62.5px;
+	height: 131.25px;
+	position: relative;
+}
+
+.movimentoOst{
+	animation: Mymove var(--tempo) linear infinite;
+}
+
+.posizioneAt{
+	top: var(--pos);
+}
+
+@keyframes Mymove {
+	from {top: var(--inizio);}
+	to {top: 100%;}
+}
+
+.movimentoOst2{
+	animation: move var(--tempo) linear infinite;
+}
+
+@keyframes move {
+	from {top: var(--inizio1);}
+	to {top: 100%;}
+}
+
+#macchina{
+	position:absolute;
+	bottom:0;
+	right: 50%;
+}
+
+.dx #macchina{
+	right:12%;
+	bottom:10%;
+}
+
+.ct #macchina{
+	left:48%;
+	right:52%;
+	bottom:10%;
+}
+
+.sx #macchina{
+	left: 12%;
+	bottom:10%;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+	<head>
+	<title>Wii</title>
+	<link rel="icon" href="https://loodibee.com/wp-content/uploads/Nintendo_Wii_logo.png" type="image/icon type">
+	<meta charset="UTF-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js">	</script>
+		<link rel="stylesheet" href="style.css">
+		
+		<style>
+		    body {
+			  background-color: black;
+			  margin: 0;
+
+			  --animazione6-durata: 2s;
+			}
+
+			@keyframes animazione6 {
+			  0% {
+				opacity: 0;
+			 }
+
+			  100% {
+				opacity: 1;
+			  }
+			}
+
+			#immagine {
+			  animation: animazione6 var(--animazione6-durata) ease-in;
+			  animation-fill-mode: forwards;
+			  animation-delay: 0s;
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		<img src="images/sfondi/home_wii.jpg" alt="Workplace" id = "immagine" usemap="#workmap">
+
+		<map name="workmap">
+			<area target="" alt="ambatufight" title="ambatufight" href="home.html" coords="505,280,149,84" shape="rect">
+			<area target="" alt="" title="mii-channel" href="mii_channel.html" coords="520,81,878,278" shape="rect">
+			<area target="" alt="" title="some-good-music"coords="162,841,77" shape="circle" onclick="musica()">
+			<area target="" alt="" title="mini" href="Mini.html" coords="908,88,1244,273" shape="rect">
+			<area target="" alt="" title="scacchi" href="scacchi\index.html" coords="159,302,494,480" shape="rect">
+			<area target="" alt="" title="labirinto" href="labirinto\progetto\home\HOME_ani.html" coords="533,301,869,482" shape="rect">
+			<area target="" alt="" title="slot" href="slot/trapmachine.html" coords="909,301,1241,477" shape="rect">
+			<area target="" alt="" title="asfaltoFolle" href="asfaltoFolle\Home.html" coords="1279,87,1616,272" shape="rect">
+		</map>
+		
+		
+	</body>
+	<script>
+		var theme = new Audio("audio/menu-music.mp3");
+		function musica(){
+			theme.play();
+		}
+	</script>
+</html>

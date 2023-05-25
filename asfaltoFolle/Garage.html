@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link href="Style/garage/garage.css" rel="stylesheet" type="text/css">	
+		<title></title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<!--script type="text/javascript" src="js/jquery-3.4.0.min.js"></script--->
+	</head>
+<!-- font usato : dela gothic one -->
+	<body>
+	
+	<img id="audio" src="images/gioco/noAudio.png">	
+	
+		<h1 style="font-family:myFirstFont; color: white">GARAGE</h1>
+		<!-- <img src="title.png"> -->
+		
+		<table style="margin: auto">
+			<tr>
+				<td><img src="images/garage/arrow sx.png" class="frc" id="indietro"></td>
+				<td><img src="images/garage/macchina1.gif" id="carimg"> </td>
+				<td><img src="images/garage/arrow dx.png" class="frc" id="avanti"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><img src="images/garage/tuttopronto.jpg" id="via"> </td>
+				<td></td>
+			</tr>
+		</table>
+	<h3 id="bottone">GO BACK</h3>	
+		
+	</body>
+	<script type="text/javascript">
+		document.getElementById('avanti').onclick=avanti;
+		document.getElementById('indietro').onclick=indietro;
+		document.getElementById('bottone').onclick=cambiaPag;
+		document.getElementById('via').onclick=pronti;
+		
+		//AUDIO--------------------------------------------
+		$(document).ready(function(){	
+				$(".content").hide();							
+
+				//audio
+				var audio = new Audio('audio/mk7.mp3');
+				var vPlay = true;
+				
+				$("#audio").click(function play() {
+					if (vPlay) {
+						$("#audio").attr("src", "images/gioco/audio.PNG");
+						audio.play();
+						audio.loop = true;
+						vPlay = false;
+					} 
+					else {
+						$("#audio").attr("src", "images/gioco/noAudio.PNG");
+						audio.pause();
+												
+						//fa partire da capo l'audio
+						audio.currentTime = 0;
+						vPlay = true;
+					}
+				})		
+			})
+		
+		//AUTO---------------------------------------------------
+		let a=1;
+		
+		function avanti()
+		{
+			if(a==6)
+			{
+				a=1;
+				document.getElementById("carimg").src = "images/garage/macchina" + a +".gif";
+			}
+			else
+			{
+				a++;
+				document.getElementById("carimg").src = "images/garage/macchina" + a +".gif";
+			}
+		}
+		
+		function indietro()
+		{
+			if(a==1)
+			{
+				a=6;
+				document.getElementById("carimg").src = "images/garage/macchina" + a +".gif";
+			}
+			else
+			{
+				a--;
+				document.getElementById("carimg").src = "images/garage/macchina" + a +".gif";
+			}
+		}
+
+		//ALTRE FUNZIONI------------------------------------------------------------
+		function cambiaPag ()
+		{
+		window.location.href = "home.html";
+		}
+		
+		function pronti ()
+		{
+		localStorage.setItem ("macchina", a);
+		window.location.href = "Home.html";
+		}
+		
+		//cercare immagini da background per il gioco, uno a mo di circuito e l'altro di citta
+		
+	</script>
+</html>

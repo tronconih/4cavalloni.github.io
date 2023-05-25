@@ -1,0 +1,109 @@
+	
+		body{
+			text-align:center;
+			background-image: url("../../images/garage/garagehd.png");
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+		}
+		
+
+		h1 {font-size: 100pt;
+		margin-top: 0px;
+		margin-bottom: 130px;
+		}
+		
+		h3 {
+		font-family:myFirstFont; 
+		color: white; 
+		float: left;
+		padding: 0px 0px 5px 20px;
+		}
+		
+		@font-face {
+		font-family: myFirstFont;
+		src: url("../../dafont/Capture\ it.ttf");
+		}
+		
+		
+		#carimg{
+			width: 700px;
+			height: 500px;
+			margin-top: 45px;
+			z-index: -1;
+		}
+		
+		#via{
+			width: 400px;
+			height: 85px;
+			z-index: 1;
+			margin-top: -50px;
+			
+			
+		}
+		
+		img.frc{
+			width: 100px;
+			height: 100px;
+
+		}
+		
+		img {
+			width: 1000px;
+			height: 250px;
+		}
+		
+		#audio{
+			float: left;
+			width: 70px; 
+			height: 70px;
+		}
+		
+		#via:hover{
+			transition: all 0.3s ease;
+			filter: brightness(1.5);
+			transform: scale(1.1);
+		}
+		
+		#indietro {
+			position: absolute;
+			margin-left:410px;
+			left: 0;
+			transform: translate(-5%, -5%);
+
+			animation: arrow-movesx 3s linear infinite;
+		}
+
+				@keyframes arrow-movesx {
+				  0% {
+					left: 0;
+				  }
+				  50% {
+					left: calc(5% - 50px);
+				  }
+				  100% {
+					left: 0;
+				  }
+				}
+		
+		#avanti {
+			position: absolute;
+			margin-right:400px;
+			right: 0;
+			transform: translate(-5%, -5%);
+
+			animation: arrow-movedx 3s linear infinite;
+		}
+			
+				@keyframes arrow-movedx {
+				  0% {
+					right: 0;
+				  }
+				  50% {
+					right: calc(5% - 50px);
+				  }
+				  100% {
+					right: 0;
+				  }
+				}
+		

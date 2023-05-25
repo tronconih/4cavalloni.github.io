@@ -1,0 +1,157 @@
+@font-face {
+	font-family: Fast Forward;
+	src: url(../../dafont/Fast\ Forward.ttf);
+}	
+
+@font-face {
+	font-family: velocista;
+	src: url(../../dafont/Velocista-Demo-FFP.ttf);
+}	
+
+@font-face {
+	font-family: crackedFont;
+	src: url(../../dafont/High_Speed.ttf);
+}	
+html, body{
+	margin: 0;
+	height: 100%;
+	overflow: hidden;
+}
+
+body{
+	background-image: url("");
+	background-size:cover;
+	background-repeat: repeat-y;
+}
+	
+#img-area{
+	/*IMMAGINE DI SFONDO*/
+	background-image: url("../../images/gioco/road1.jpg");
+	margin-left: auto;
+	margin-right: auto;
+	background-position: center center;
+	background-repeat: repeat-y;
+	background-size: cover;
+	height: 100%;
+	width: 55%;
+	position:fixed;
+	left:0;
+	right:0;
+}	
+
+h1{
+	font-family: Fast Forward;
+	text-align: center;
+	color:#ffd84a;
+}
+
+h2{
+	font-family: crackedFont;
+	color: beige;
+	font-size: 30px;
+	margin-top: 130px;
+	margin-left: 85px;
+}
+
+.content{
+	/*div*/
+	background-color: rgba(0, 0, 0, 0.562);
+	/*opacity: 0.2;*/
+	position:fixed;
+	width:100%;
+	height:100%;
+	top:0px;
+	left:0px;
+	z-index:1000;		
+	}
+	
+button{
+	border-radius: 10px;
+	border-color: white;
+	padding: 10px;
+	background-color: rgba(0,0,0,0.4);
+	font-family: crackedFont;
+	font-size: 25px;
+	color: white;
+	height: 70px;
+	width: 200px;
+}
+
+a{
+	text-decoration:none;	
+	color: white;
+}
+
+.center{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: block;
+}
+	
+.center button{
+	margin-top: 25px;
+	display: block;
+}
+
+.bordiSx{
+	width: 15%;
+	float: left;
+}
+
+.restart{
+	border: 2px solid #000000;
+    border-radius: 10px;
+}
+
+.restart:first-of-type{
+	float: left;
+	margin-left: 55px;
+}
+
+.restart:last-of-type{
+	margin-left: 40px;
+}
+
+.restart1{
+	border: 2px solid #ffd84a;
+    border-radius: 10px;
+}
+
+.restart1:first-of-type{
+	float: left;
+	margin-left: 55px;
+}
+
+.restart1:last-of-type{
+	margin-left: 40px;
+}
+
+.gameOver{
+	background-color: rgba(0,0,0,0.5);
+	position: absolute;
+	width: 550px;
+	height: 550px;
+	border: 5px solid whitesmoke;  
+	border-radius: 30px;		
+	
+	top: 50%;
+	left: 50%;
+    margin: -290px 0 0 -290px;	
+}
+
+#countDown{
+	position:absolute;
+	width:100px;
+	height:100px;
+	top:35%;
+	left:49%;
+}
+
+#countDown p{
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	color:#ffffff;
+	font-size: 100px;
+	text-shadow: 3px 3px #a3a3a3;
+}

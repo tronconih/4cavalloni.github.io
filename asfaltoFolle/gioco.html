@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<link href="Style/gioco/settings.css" rel="stylesheet" type="text/css">	
+		<link href="Style/gioco/car.css" rel="stylesheet" type="text/css">	
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script type="text/javascript" src="script/script.js"></script>
+		<title>Gioco</title>
+	</head>
+	
+	<body>
+		<div>
+			<div class="bordiSx">
+				<img id="opzioni" src="images/gioco/opzioni.png" width="70px" height="70px">
+				<img id="audio" src="images/gioco/noAudio.png" width="70px" height="70px">	
+			</div>
+			<div id="img-area">
+				<span id="macchina"><span class="movimentoMac"></span></span>
+				<span id="ostacolo"><img class="movimentoOst" src="images/gioco/Ostacolo1.png"></span>
+				<span id="ostacolo2" style="display:none"><img class="movimentoOst2" src="images/gioco/Ostacolo1.png"></span>
+			</div>
+
+			<div class="gameOver">	
+				<h1>GAME OVER</h1>	
+				<h2>SCORE: "<span class="pts"></span>"</h2>	
+				<div style="margin-top:155px">
+					<button id="restart"><a href="gioco.html">RESTART</a></button>
+					<button id="record"><a href="Record.html">RECORD</a></button>
+				</div>	
+			</div>
+			
+			<div id="countDown"></div>
+		</div>
+		
+		
+		<div class="content">
+				
+			<div class="center">
+				<button class="bottone1">RESUME</button>
+				<button class="bottone2"><a href="Garage.html">GARAGE</a></button>
+				<button class="bottone3"><a href="Home.html">HOME</a></button>
+			</div>
+		</div>	
+		
+		
+	</body>
+</html>

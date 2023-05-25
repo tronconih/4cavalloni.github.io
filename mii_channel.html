@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+	<head>
+		<title>Mii Channel</title>
+		<link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/1/1d/Mii_Logo.png" type="image/icon type">
+		<meta charset="UTF-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js">	</script>
+		<link rel="stylesheet" href="style.css">
+		
+		<style>
+		</style>
+	</head>
+	<body>
+		<img src="images/mute.png" id = "volume-mii">
+		<img src = "images/mii-channel.png" alt="mii" id = "sfondo-mii">
+	</body>
+	<script>
+		let tasto = document.getElementById("volume-mii");
+		tasto.onclick = change;
+		
+		var acceso = false;
+		
+		var miiMusic = new Audio("audio/mii-channel-theme.mp3");
+		
+		function change(){
+			if(acceso == false)
+			{
+				tasto.src = "images/volume.png";
+				acceso = true;
+				miiMusic.play();
+			}
+			else
+			{
+				tasto.src = "images/mute.png";
+				acceso = false
+				miiMusic.pause();
+			}
+		}
+		
+	</script>
+</html>

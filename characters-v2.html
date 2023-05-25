@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<title>Characters</title>
+	<link rel="icon" href="images/logo.png" type="image/icon type">
+	<link rel="stylesheet" href="style.css">
+	
+	<style>
+
+		html{
+			background-color: #eed7a1;
+			cursor: url("cursor/WiiCursor.png"), auto;
+		}
+		
+		.back{
+			margin-left:-125px;
+		}
+		.next{
+			top:-28px;
+		}
+		
+	</style>
+</head>
+<body>
+	<div id="tutto">
+	
+		<h1 id="titolo">CHOOSE YOUR FIGHTER!</h1>
+	
+		<div id="p1">
+			<img src="images/mysterious.png" alt="First Player" id="completo1">
+		</div>
+		
+		<div id="p2">
+			<img src="images/mysterious.png" alt="First Player" id="completo2">
+		</div>
+		
+		<div id="personaggi">
+			<ul>
+				<li> <img src="images/berta/testa-1.png" alt="First Character" id="testa"> </li>
+				<li> <img src="images/davide/testa-1.png" alt="Second Character" id="testa2"> </li>
+				<li> <img src="images/giorgio/testa-1.png" alt="Third Character" id="testa3"> </li>
+			</ul>
+		</div>
+		
+		<p id="scelta"> Player 1 it's your turn! </p>
+		
+		<button class = "back" id="indietroHome" target="" >Back</button>
+		<button class = "next" id="nextChar" target="" >Next</button>
+		
+	</div>
+	
+	<script src="script_personaggi.js"></script>
+
+</body>
+</html>

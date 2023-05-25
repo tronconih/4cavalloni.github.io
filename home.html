@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+	<head>
+		<title>AMBATUFIGHT</title>
+		<link rel="icon" href="images/logo.png" type="image/icon type">
+		<link rel="stylesheet" href="style.css">
+		<style>
+			
+			body {
+				background-color: black;
+				margin: 0;
+
+				--animazione1-durata: 5s;
+				--animazione2-durata: 2s;
+				--animazione3-wait: 7s;
+			}
+			--animazione3-wait: 7s;
+			
+			#back{
+				background-color: black;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<div id="intro">
+			<p id="credit">A Tronzoni & Mo. game</p>
+			<div id="pic"></div>
+		</div>
+		
+		<div id="starter">
+			<h1> Press <img src="images/spacebar.png" style="display: inline"> to play </h1>
+		</div>
+		
+		
+		
+	</body>
+	<script>
+		var main = new Audio('audio/main.mp3'); //main theme
+		
+		var intro = document.getElementById("intro");
+		intro.onclick = musica;
+		
+		document.addEventListener('keydown', (e) => {
+			if(e.key == " ") {
+				//location.replace("characters-v2.html");
+				window.open("characters-v2.html");
+				
+				main.volume = 0.3; //ABBASSA IL VOLUME
+			}
+		});
+		
+		function musica(){
+			main.play();
+		}
+	</script>
+</html>
